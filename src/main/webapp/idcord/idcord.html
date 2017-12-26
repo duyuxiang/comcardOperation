@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html" charset="UTF-8">
+	<title>证件扫描</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/addmoney.css">
+	<link rel="stylesheet" href="css/layer-animate.css"/>
+    <!-- 弹出层 -->
+    <script  type="text/javascript" src="js/popwin.js"></script>
+
+
+</head>
+<body>
+<div id="container">
+	<div id="left" style="width: 35%">
+		<div class="seach">
+				<div class="input-group">
+					<a style="text-decoration:none;" href="homePage">
+						<span  class="input-group-addon" style="background-color: #15c786;color: white;position: relative;right: 197px">回到主页</span>
+					</a>
+			</div>
+		</div>
+		<div class="roomno">
+			<table>
+				<thead>
+					<tr>
+					  <td >预定单号</td>
+						<td >客人名</td>
+						<td >团体名</td>
+						<td >开始时间</td>
+						<td >结束时间</td>
+					</tr>
+				</thead>
+				<tbody id="house">
+					
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div id="center"></div>
+	<div id="right" style="width: 64%">
+		
+		<div class="right_nav">
+			<ul>
+      <li style="width: 100%;background-color: #FFE9C7;color: #8B6256;display: flex;justify-content: left;align-items: center;padding-left: 2%;">
+          预定信息：
+        </li>
+				<li><div>客人名：</div><div name="guestName"></div></li>
+				<li><div>客历号：</div><div name="guestThno"></div></li>
+				<li><div>团体名：</div><div name="teamName"></div></li>
+				<li><div>底店时间：</div><div name="startDate"></div></li>
+				<li><div>离店时间：</div><div name="endDate"></div></li>
+				<li><div>付款方式：</div><div name="payMode"></div></li>
+				<li><div>预定单号：</div><div name="bookingNo"></div></li>
+				<li><div>合约单位：</div><div name="contractUnit"></div></li>
+				
+			</ul>
+		</div>
+		<div class="right_section">
+			<ul>
+				
+				<li style="width: 20%">房间号</li>
+				<li style="width: 20%">房间类型</li>
+				<li style="width: 20%">房间价格</li>
+				<li style="width: 20%">门锁id</li>
+	     		<li style="width: 20%">操作</li>	                                                                                                               
+			</ul>
+		</div>
+		<div class="right_sections" style="height: 40%">
+			<table id="table">
+
+			</table>
+		</div>
+		<div class="right_footer" style="height: 5%">
+			<ul style="height: 100%">
+        <li style="width: 8%">房间号</li>
+				<li style="width: 8%">姓名</li>
+				<li style="width: 8%">性别</li>
+        <li style="width: 8%">名族</li>
+				<li style="width: 10%">出生日期</li>
+				<li style="width: 25%">住址</li>
+        <li style="width: 20%">证件号码</li>
+        <li style="width: 13%">操作</li>
+			</ul>
+		</div>
+    <div class="right_sections" style="height: 35%;margin: 0">
+      <table id="tables">
+      </table>
+    </div>
+	</div>
+</div>
+                      
+<!-- jQuery样式 -->
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<!-- 引入ip -->
+<script type="text/javascript" src="js/ip.js"></script>
+<!-- 弹框js -->
+<script type="text/javascript" src="js/method.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/idcord.js"></script>
+</body>
+</html>

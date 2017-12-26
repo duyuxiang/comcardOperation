@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>read card</title>
+</head>
+<body>
+<div>
+    <input type="submit" value="open" onclick="openSokect()" />
+    <input type="submit" value="Close" onclick="closeSocket()" />
+</div>
+<div id="messages"></div>
+<script type="text/javascript">
+    var webSocket=null;
+    //打开socket
+    function openSokect() {
+        if('WebSocket' in window){
+            webSocket = new WebSocket("ws://localhost:8089/cardWebSocket");
+        } else{
+            alert('Not support websocket')
+        }
+
+        webSocket.onerror = function(event) {
+            onError(event)
+        };
+
+        webSocket.onopen = function(event) {
+            onOpen(event)
+        };
+
+        webSocket.onmessage = function(event) {
+            onMessage(event)
+        };
+    }
+
+
+    //接收到服务端消息调用的方法
+    function onMessage(event) {
+        document.getElementById('messages').innerHTML
+            += '<br />' + event.data;
+        closeSocket();
+    }
+    //建立socket时调用的方法
+    function onOpen(event) {
+    }
+    //socket连接异常调用的方法
+    function onError(event) {
+        alert(event.data);
+    }
+
+   //关闭socket
+    function closeSocket() {
+        if(webSocket!=null)
+        webSocket.close();
+    }
+
+
+
+
+</script>
+</body>
+</html>

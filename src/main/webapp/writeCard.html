@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>write card</title>
+    <script src="jquery-2.2.2.min.js"></script>
+</head>
+<body>
+
+房间号:<input type="text" class="roomno"/>
+天数:  <input type="text" class="time"/>
+<input type="button" value="写卡" class="writecard"/>
+
+<script>
+    $(".writecard").on("click",function() {
+        var roomno = $(".roomno").val();
+        var time = $(".time").val();
+
+        $.ajax({
+            url: "/writerCard",
+            type: "get",
+            data: {"roomno": roomno,"time":time},
+            success: function (data) {
+                alert(data);
+            },error:function (data) {
+                console.log(data);
+            }
+        });
+    })
+</script>
+</body>
+</html>

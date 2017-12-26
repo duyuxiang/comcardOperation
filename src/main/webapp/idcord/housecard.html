@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>读写宾客卡</title>
+	
+  <!-- 公用css -->
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+	<!-- 弹框样式 -->
+	<link rel="stylesheet" href="css/layer-animate.css"/>
+    <!-- 弹出层 -->
+    <link rel="stylesheet" type="text/css" href="css/housecard.css">
+    <script type="text/javascript" src="js/popwin.js"></script>
+   <link rel="stylesheet" href="css/pager.css"/>
+   <script src="js/pager.js">  </script>
+</head>
+<body>
+<div id="container">
+<div id="top">读写宾客卡</div>
+<div style="width: 100%;height: 99.5%;margin-top: 0.5%">
+	<div id="left">
+	<div class="top">
+		<ul style="width: 100%;
+    height: 100%">
+			
+			<li style="width: 25% !important;
+    	float: left !important;
+    	display: flex !important;
+    	justify-content: center !important;
+    	align-items: center !important;
+    	height: 100% !important;
+    	background-color: #06B1CD !important;
+    	color: white !important">房间号</li>
+			<li style="width: 25% !important;
+    	float: left !important;
+    	display: flex !important;
+    	justify-content: center !important;
+    	align-items: center !important;
+    	height: 100% !important;
+    	background-color: #06B1CD !important;
+    	color: white !important">客人名</li>
+			<li style="width: 25% !important;
+    	float: left !important;
+    	display: flex !important;
+    	justify-content: center !important;
+    	align-items: center !important;
+    	height: 100% !important;
+    	background-color: #06B1CD !important;
+    	color: white !important">写卡时间</li>
+			<li style="width: 25% !important;
+    	float: left !important;
+    	display: flex !important;
+    	justify-content: center !important;
+    	align-items: center !important;
+    	height: 100% !important;
+    	background-color: #06B1CD !important;
+    	color: white !important">状态</li>
+		</ul>
+	</div>
+     <div class="center">
+     	<table id="content">
+     	</table>
+     </div>
+    <div class="footer" style="background-color: #F7F3F3">
+  <ul class="pagination" id="page1" style="float: right;margin-right: 2%">
+    </ul>
+  
+    </div>
+	</div>
+
+	
+	<div id="center" >
+		<div style="width: 99%;height: 100%;margin-left: 1%;background-color: #F7F3F3;display: flex;justify-content: center;align-items: center;">
+	<fieldset style="width: 90%;height: 80%;border:1px solid #ccc">
+    <legend style="margin-left: 5%">发卡信息</legend>
+   <ul id="ul">
+   	<li><div>房&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</div><div><input name="roomNo" /></div></li>
+    <!-- <li><div>是否发卡：</div><div>是<input type="radio" class="sum" name="yes" value="是" checked />否<input class="sum" type="radio" name="yes" value="否" /></div></li> -->
+   	<!--<li><div>开始时间：</div><div><input style="width: 80%;-->
+  	  <!--height: 50%;" type="text" name="startDate"  placeholder="请输入日期" onblur="addplus()" onclick="laydate({istime: true,format:'YYYY-MM-DD hh:mm'})"/></div></li>-->
+   	<!--<li><div>结束时间：</div><div><input style="width: 80%;-->
+  	  <!--height: 50%;" type="text" name="endDate"  placeholder="请输入日期" onblur="addplus()"  onclick="laydate({istime: true,format:'YYYY-MM-DD hh:mm'})"/></div></li>-->
+   	<li id="days"><div>天数：</div><div><input name="days"   /></div></li>
+    <li style="display: none" id="bookingNo"><div>预定单号：</div><div><input name="bookingNo"/></div></li>
+     <li style="display: none" id="guestName"><div>客人名：</div><div><input name="guestName"/></div></li>
+    
+   	<!-- <li><div>预定单号：</div><div><input/></div></li> -->
+   	<li><div></div><div><button onclick="submit()" id="submit">确定</button></div></li>
+     <li><div></div><div id="messages" style="color: red"></div></li>
+   </ul>
+  
+   	 </fieldset>
+   </div>
+   
+		</div>
+		<div id="right" style="background-color: #83D7AD;float: right;">
+		<ul>
+			<li onclick="closeSocket()"><i class='fa fa-align-center fa-fw'></i>&nbsp;&nbsp;&nbsp;写&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;入</li>
+			<li onclick="openSokect()"><i class='fa fa-plus-square-o fa-fw'></i>&nbsp;&nbsp;&nbsp;读&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;卡</li>
+
+			<li style="margin-top: 50px;"><i class='fa fa-plus-square-o fa-fw'></i>
+				<a style="text-decoration:none" href="homePage">&nbsp;&nbsp;&nbsp;回到主页&nbsp;</a></li>
+		</ul>
+	</div>
+	</div>
+	
+	</div>
+</div>
+</body>
+<!-- jQuery样式 -->
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<!-- 日历选择日期-->
+<script type="text/javascript" src="js/laydate/laydate.js"></script> 
+<script type="text/javascript" src="js/jquery-ui-1.10.1.min.js"></script>
+<!-- 引入ip -->
+<script type="text/javascript" src="js/ip.js"></script>
+<!-- 弹框js -->
+<script type="text/javascript" src="js/method.js"></script>
+<!-- 公共js -->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/housecard.js"></script>
+</html>
